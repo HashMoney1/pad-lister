@@ -2,4 +2,3 @@
 target/
 .idea/
 migration.sql
-Config.java/
