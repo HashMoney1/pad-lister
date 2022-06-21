@@ -1,0 +1,40 @@
+body {
+    background-image: url("../imgs/spiration-light.png");
+}
+
+button.btn-primary.delete {
+    background-color: #8a8f94;
+    border-color: #a3a8ad;
+    margin-left: 10px;
+    width: 37%;
+}
+
+a.btn.btn-primary {
+    width: 37.5%;
+    margin-top: 0;
+    margin-left: 10px;
+    height: 33px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    padding-top: 20px;
+}
+
+.card-container {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+}
+
+.button-container {
+    width:100%;
+    text-align: center;
+}
+
+.btn-return {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}

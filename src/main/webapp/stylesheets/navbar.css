@@ -1,0 +1,18 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+    font-family: 'Lobster', cursive;
+}
+
+a.navbar-brand:hover {
+    color: #239288 !important;
+}
+
+ul.nav {
+    font-family: 'News Cycle', sans-serif;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #239288 !important;
+    background-color: transparent;
+    font-weight: 500;
+}

@@ -1,0 +1,94 @@
+body {
+    margin:0px;
+    background-image: url("../imgs/spiration-light.png");
+}
+
+h1 {
+    text-align: center;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.dad-photo {
+    width: 100%;
+}
+
+.left {
+    position:absolute;
+    left: 0;
+    top:51px;
+    bottom: 0;
+    width: 22%;
+    min-width: 250px;
+    background-color: rgb(241, 203, 171);
+    padding-right: 3px;
+    border-right: 1px dashed dimgrey;
+    height:100%;
+}
+
+.main {
+    position: absolute;
+    top:51px;
+    right:0;
+    bottom:0;
+    float:right;
+    width: 77%;
+}
+
+.button-container {
+    width:100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+a.btn.btn-default {
+    width: 53%;
+    margin: 3px auto;
+    text-align: left;
+}
+
+img.img-circle {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.left {
+    position:absolute;
+    left: 0;
+    top:51px;
+    bottom: 0;
+    width: 22%;
+    background-color: rgb(241, 203, 171);
+    padding-right: 3px;
+    border-right: 1px dashed dimgrey;
+    height:100%;
+}
+
+.main {
+    position: absolute;
+    top:51px;
+    right:0;
+    bottom:0;
+    float:right;
+    width: 78%;
+}
+
+.button-container {
+    width:100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+a.btn.btn-default {
+    width: 53%;
+    margin: 3px auto;
+    text-align: left;
+}
+
+img.img-circle {
+    margin: 0 auto;
+    margin-top: 20px;
+}

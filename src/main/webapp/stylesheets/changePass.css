@@ -1,0 +1,49 @@
+body {
+    background-image: url("../imgs/spiration-light.png");
+    font-family: 'News Cycle', sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    padding-top: 20px;
+}
+
+.form-container {
+    background-color: white;
+    /*width: 50%;*/
+    /*height: 500px;*/
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 48%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    border-radius: 40px;
+    border: 1px solid #d2d1d1;
+}
+
+
+div.input-container {
+    width: 75%;
+    margin: 50px 0 60px 0;
+}
+
+input[type=submit].btn-block {
+    width: 75%;
+    margin: 50px 0 60px 10%;
+}
+
+input.btn.btn-primary.btn-block {
+    background-color: #239288 !important;
+    background-image: none;
+}
+
+.btn-return {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
