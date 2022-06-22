@@ -65,7 +65,6 @@ public class Ad {
             String shortDescription = description;
             return shortDescription;
         }
-
     }
 
     public void setDescription(String description) {

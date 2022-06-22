@@ -2,15 +2,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-<%--    <jsp:include page="WEB-INF/partials/head.jsp">--%>
-<%--        <jsp:param name="title" value="Welcome!"/>--%>
-<%--    </jsp:include>--%>
+    <jsp:include page="WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="Welcome!"/>
+    </jsp:include>
     <link href="https://fonts.googleapis.com/css?family=Lobster|News+Cycle" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/basic.css">
     <link rel="stylesheet" href="stylesheets/index.css" type="text/css">
 </head>
 <body>
-<%--<jsp:include page="WEB-INF/partials/navbar.jsp"/>--%>
+<jsp:include page="WEB-INF/partials/navbar.jsp"/>
 <div class="jumbotron">
     <div class="container banner">
         <div class="header">

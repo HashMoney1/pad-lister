@@ -39,6 +39,7 @@
                       Deleted Ads
                 </a>
             <span> ${sessionScope.id}</span>
+
             </div>
         </div>
     </div>

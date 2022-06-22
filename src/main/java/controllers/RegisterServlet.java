@@ -27,7 +27,7 @@ public class RegisterServlet extends HttpServlet {
         String hash = Password.hash(password);
         User existingUser = DaoFactory.getUsersDao().getUserByUsername(username);
 
-        if (DaoFactory.getUsersDao().getUserByUsername(username) != null) {
+        if (existingUser != null) {
             request.setAttribute("error", "This username is already taken.");
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
             return;
