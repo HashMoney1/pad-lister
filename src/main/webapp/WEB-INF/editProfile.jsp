@@ -8,7 +8,7 @@
 <body>
 <%@include file="partials/navbar.jsp" %>
 
-<div class="profile-container">
+<div class="profile-container shadow">
     <div>
         <h1 class="profile-welcome">Update email</h1>
     </div>

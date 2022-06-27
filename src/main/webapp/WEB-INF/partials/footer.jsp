@@ -6,7 +6,7 @@
 
 </head>
 <body>
-<div class="footer">
+<div class="footer shadow">
     <p class="social-title">Get connected with us on social networks:</p>
 
     <div class="footer-links-holder">

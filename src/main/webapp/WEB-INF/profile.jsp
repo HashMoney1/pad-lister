@@ -18,7 +18,7 @@
             <a href="/ads/create">Submit a pad</a>
     </div>
 
-    <div class="all-ads-container">
+    <div class="all-ads-container shadow">
         <div class="title">All ads</div>
         <div class="card-container">
             <c:forEach var="Ad" items="${ads}">

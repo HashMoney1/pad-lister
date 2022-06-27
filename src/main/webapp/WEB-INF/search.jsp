@@ -10,10 +10,10 @@
 <body>
 <jsp:include page="partials/navbar.jsp" />
 
-<div class="ad-container">
-    <h1 class="title">All the category of Ads</h1>
+<div class="ad-container shadow">
+    <h1 class="title">Search results</h1>
     <div class="card-container">
-        <h3>All ads related to: <c:out value="${keyword}" /></h3>
+        <h3>All ads related to: "<c:out value="${keyword}" />"</h3>
         <c:if test="${noResults == true}" >
         <p class="w-text">We couldn't find any results for <c:out value="${keyword}"/></p>
     </c:if>

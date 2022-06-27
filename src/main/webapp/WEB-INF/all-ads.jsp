@@ -10,23 +10,25 @@
 <body>
 <jsp:include page="partials/navbar.jsp" />
 
-<div class="ad-container">
-    <div class="title">All ads</div>
-    <div class="card-container">
-        <c:forEach var="Ad" items="${allAds}">
-            <div class="card">
-                <div>
-                    <h4>${Ad.title}</h4
-                    <p>${Ad.description}</p>
+
+    <div class="ad-container shadow">
+        <div class="title">All ads</div>
+        <div class="card-container">
+            <c:forEach var="Ad" items="${allAds}">
+                <div class="card">
+                    <div>
+                        <h4>${Ad.title}</h4
+                        <p>${Ad.description}</p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>Added ${Ad.getTimeDifferenceString()}</p>
+                    </div>
                 </div>
-                <br>
-                <div>
-                    <p>Added ${Ad.getTimeDifferenceString()}</p>
-                </div>
-            </div>
-        </c:forEach>
+            </c:forEach>
+        </div>
     </div>
-</div>
+
 
 
 </body>

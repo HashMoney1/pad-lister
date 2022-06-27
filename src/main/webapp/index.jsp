@@ -13,51 +13,39 @@
 </head>
 <body>
 <jsp:include page="WEB-INF/partials/navbar.jsp"/>
-<%--<jsp:include page="WEB-INF/partials/hero.jsp"/>--%>
+           <div class="hero-container shadow">
+               <div class="hero-left">
+                   <p class="hero-title">ENJOY</p>
+                   <p class="hero-title">YOUR</p>
+                   <p class="hero-title">STAY</p>
+                   <div class="orange-line"></div>
+                   <p class="hero-sub-title">We don't rent. We provide an experience</p>
 
-        <div class="hero-container">
-            <div class="hero-left">
-                <p class="hero-title">ENJOY</p>
-                <p class="hero-title">YOUR</p>
-                <p class="hero-title">STAY</p>
-                <div class="orange-line"></div>
-                <p class="hero-sub-title">We don't rent. We provide an experience</p>
-
-                <div class="all-listings-button">
-                    <a href="/ads" role="button">View Listings</a>
-                </div>
-            </div>
-            <div class="hero-right">
-                <img src="imgs/padlister_hero.png">
-            </div>
-
-        </div>
-
-
-
-
-        <div class="ad-container">
-            <div class="title">Recent Ads</div>
-            <div class="card-container">
-                <c:forEach var="Ad" items="${newestAds}">
-                    <div class="card">
-                        <div>
-                            <h4>${Ad.title}</h4
-                            <p>${Ad.description}</p>
-                        </div>
-                        <br>
-
-                        <div>
-<%--                            <p>${Ad.timeCreated}</p>--%>
-                            <p>Added ${Ad.getTimeDifferenceString()}</p>
-                        </div>
-
-                    </div>
-                </c:forEach>
-            </div>
-        </div>
-
+                   <div class="all-listings-button">
+                       <a href="/ads" role="button">View Listings</a>
+                   </div>
+               </div>
+               <div class="hero-right">
+<%--                   <img src="imgs/padlister_hero.png">--%>
+               </div>
+           </div>
+           <div class="ad-container shadow">
+               <div class="title">Recent Ads</div>
+               <div class="card-container">
+                   <c:forEach var="Ad" items="${newestAds}">
+                       <div class="card">
+                           <div>
+                               <h4>${Ad.title}</h4
+                               <p>${Ad.description}</p>
+                           </div>
+                           <br>
+                           <div>
+                               <p>Added ${Ad.getTimeDifferenceString()}</p>
+                           </div>
+                       </div>
+                   </c:forEach>
+               </div>
+           </div>
 </body>
 <jsp:include page="WEB-INF/partials/footer.jsp"/>
-
 </html>

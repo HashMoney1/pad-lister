@@ -9,7 +9,7 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
-<div class="profile-container">
+<div class="profile-container shadow>
 
     <div>
         <h1 class="profile-welcome">Enter a pad</h1>

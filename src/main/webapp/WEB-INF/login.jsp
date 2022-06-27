@@ -11,7 +11,7 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-<div class="register-login-container">
+<div class="register-login-container shadow">
     <h1>Login Below</h1>
 
     <form action="/login" method="post">
