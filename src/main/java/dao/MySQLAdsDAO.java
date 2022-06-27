@@ -210,4 +210,29 @@ public class MySQLAdsDAO implements Ads {
         return ads;
     }
 
+    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+        String query = "SELECT *, users.username FROM ads\n" +
+                "JOIN users\n" +
+                "ON users.id = ads.user_id\n" +
+                "WHERE ads.title LIKE ?";
+        PreparedStatement ps = connection.prepareStatement(query);
+        ps.setString(1, "%" + keyword + "%");
+        ResultSet rs = ps.executeQuery();
+        List<Ad> keywordAds = new ArrayList<>();
+        while (rs.next()) {
+            Ad newAd = new Ad(
+
+                    rs.getLong("id"),
+                    rs.getLong("user_id"),
+                    rs.getString("title"),
+                    rs.getString("description"),
+                    rs.getTimestamp("created_at")
+
+            );
+            keywordAds.add(newAd);
+
+        }
+        return keywordAds;
+    }
+
 }

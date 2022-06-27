@@ -21,3 +21,6 @@ public class AdsServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/all-ads.jsp").forward(request, response);
     }
 }
+
+
+

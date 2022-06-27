@@ -24,6 +24,10 @@
             <a href="/login">Login</a>
         </c:if>
     </div>
+
+    <form action="/searchAds" method="POST">
+        <input type='submit'><a href="/searchAds"></a>
+        <input type="search" placeholder="Search for ad" name="keyword"></form>
 </nav>
 </body>
 
