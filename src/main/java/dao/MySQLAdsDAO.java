@@ -221,16 +221,13 @@ public class MySQLAdsDAO implements Ads {
         List<Ad> keywordAds = new ArrayList<>();
         while (rs.next()) {
             Ad newAd = new Ad(
-
                     rs.getLong("id"),
                     rs.getLong("user_id"),
                     rs.getString("title"),
                     rs.getString("description"),
                     rs.getTimestamp("created_at")
-
             );
             keywordAds.add(newAd);
-
         }
         return keywordAds;
     }
