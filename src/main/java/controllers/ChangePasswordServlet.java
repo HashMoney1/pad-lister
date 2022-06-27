@@ -15,7 +15,6 @@ import java.util.HashMap;
 @WebServlet(name = "ChangePasswordServlet", urlPatterns = "/profile/password")
 public class ChangePasswordServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String oldPassword = request.getParameter("old-password");
         String newPassword = request.getParameter("new-password");
         String hash = Password.hash(newPassword);

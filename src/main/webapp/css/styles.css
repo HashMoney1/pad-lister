@@ -1,0 +1,398 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*box-sizing: border-box;*/
+}
+
+
+
+body {
+    background-image: url("/imgs/padlister_background.png");
+    background-repeat: repeat;
+    background-size: 45px 45px;
+}
+
+
+.nav-bar {
+    /*border: 2px solid purple;*/
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-family: 'Krona One', serif;
+
+}
+
+.logo-holder {
+    /*border: 2px solid red;*/
+    padding: 15px;
+    height: 70px;
+    width: 100px;
+    text-align: center;
+}
+
+.logo {
+    height: 100%;
+}
+
+.links-holder {
+    /*border: 2px solid red;*/
+    padding: 25px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.links-holder a {
+    text-decoration: none;
+    color: white;
+    transition: 1s ease;
+}
+
+.links-holder a:hover {
+    text-decoration: none;
+    color: #ff8b2e;
+}
+
+
+
+/*INDEX*/
+
+.hero-container {
+    max-height: 80vh;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    justify-content: space-between;
+    background-color: white;
+    /*width: 100%;*/
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.hero-container .hero-left {
+    padding-left: 25px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-title {
+    font-family: 'Krona One', serif;
+    font-size: 50px;
+}
+
+.hero-sub-title {
+    font-family: 'Parisienne', serif;
+    font-size: 20px;
+}
+
+.orange-line {
+    border: 3px solid #ff8b2e;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.all-listings-button {
+    margin-top: 35px;
+    background-color: #000000;
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 30px;
+    transition: .5s ease;
+}
+
+.all-listings-button:hover{
+    background-color: #ff8b2e;
+}
+
+.all-listings-button a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Krona One', serif;
+}
+
+.hero-container .hero-right {
+    background-color: white;
+}
+
+.hero-container .hero-right img{
+    width: 400px;
+    max-width: 400px;
+}
+
+
+.ad-container {
+    max-height: 40vh;
+    min-height: 40vh;
+    width: 100%;
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ff8b2e;
+    padding-top: 50px;
+}
+
+
+.title {
+    font-family: 'Parisienne', serif;
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+.card-container {
+    /*border: 2px solid blue;*/
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.card{
+    min-width: 180px;
+    height: 150px;
+    margin: 5px;
+    padding: 20px;
+    background-color: white;
+    line-height: 25px;
+    border-radius: 8px;
+
+}
+
+.description-button {
+    margin-top: 35px;
+    background-color: #000000;
+    text-align: center;
+    border-radius: 30px;
+    transition: background-color .5s ease;
+    margin-bottom: 25px;
+
+}
+
+
+.description-button:hover{
+    background-color: #2c2c2c;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+    font-family: 'Krona One', serif;
+    text-decoration: none;
+    padding: 5px 15px;
+
+}
+
+.footer {
+    /*border: 2px solid purple;*/
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: 'Krona One', serif;
+}
+
+.footer-links-holder {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.footer-links-holder i {
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-links-holder a {
+    text-decoration: none;
+    color: white;
+    transition: .5s ease;
+}
+
+.footer-links-holder a:hover {
+    color: #ff8b2e;
+}
+
+.social-title {
+    font-family: 'Krona One', serif;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Roboto Light', serif;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.info {
+    flex: 1 0 23%;
+    margin: 5px;
+    height: 100px;
+}
+
+.info-one, .info-two, .info-three, .info-four{
+    font-family: 'Krona One', serif;
+    font-size: 12px;
+    color: #ff8b2e;
+}
+
+
+.copyright {
+    font-family: 'Roboto Light', serif;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: white;
+    transition: .5s ease;
+}
+
+.copyright a:hover {
+    color: #ff8b2e;
+}
+
+.profile-container {
+    max-height: 100vh;
+    min-height: 100vh;
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ff8b2e;
+}
+
+.profile-welcome {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Parisienne', serif;
+    color: white;
+    background-color: black;
+}
+
+.profile-links {
+    height: 100px;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Krona One', serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-links a {
+    text-decoration: none;
+    color: white;
+    transition: 1s ease;
+
+}
+
+.profile-links a:hover {
+    color: #ff8b2e;
+}
+
+
+.profile-container .all-ads-container {
+    padding-top: 20px;
+}
+
+.register-login-container {
+    background-color: white;
+    width: 800px;
+    margin: 0 auto;
+    height: 70vh;
+}
+
+.register-login-container h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: 'Parisienne', serif;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-format {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 15px;
+    font-family: 'Krona One', serif;
+    font-size: 13px;
+}
+
+.input-format input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    font-family: 'Parisienne', serif;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+.need-account {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.need-account a {
+    text-decoration: none;
+    font-family: 'Krona One', serif;
+    color: black;
+    font-size: 12px;
+    transition: .5s ease;
+}
+
+.need-account a:hover {
+    color: #ff8b2e;
+}
+
+.return {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Parisienne', serif;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+
+}
+
+.return a {
+    text-decoration: none;
+    color: white;
+}
+
+
+

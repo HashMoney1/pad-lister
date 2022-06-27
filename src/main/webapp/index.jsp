@@ -5,44 +5,59 @@
     <jsp:include page="WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome!"/>
     </jsp:include>
-    <link href="https://fonts.googleapis.com/css?family=Lobster|News+Cycle" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/basic.css">
-    <link rel="stylesheet" href="stylesheets/index.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oleo+Script+Swash+Caps&family=Parisienne&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet">
+
 </head>
 <body>
 <jsp:include page="WEB-INF/partials/navbar.jsp"/>
-<div class="jumbotron">
-    <div class="container banner">
-        <div class="header">
-            <h1>Padlister</h1>
-            <p class="index-subtitle"></p>
-            <p>
-                <a class="index-button" href="/ads" role="button">See All Listings Here</a>
-            </p>
-        </div>
-    </div>
-</div>
+<%--<jsp:include page="WEB-INF/partials/hero.jsp"/>--%>
 
-<div class="container">
-    <div class="row justify-content-around">
-        <h3>Most Recent Ads</h3>
-        <c:forEach var="Ad" items="${newestAds}">
-            <div class="col-sm-4">
-                <div class="index-card">
-                    <div class="index-card-body">
-                        <h4 class="index-card-title">${Ad.title}</h4>
-                        <p class="index-card-text">${Ad.shortDescription}</p>
-                    </div>
-                    <a href="/ad?id=${Ad.id}" class="index-button">More Details</a>
-                    <div class="index-card-footer">
-                        <p class="index-card-subtitle">${Ad.timeCreated}</p>
-                        <p class="index-card-subtitle">Added ${Ad.getTimeDifferenceString()}</p>
-                    </div>
+        <div class="hero-container">
+            <div class="hero-left">
+                <p class="hero-title">ENJOY</p>
+                <p class="hero-title">YOUR</p>
+                <p class="hero-title">STAY</p>
+                <div class="orange-line"></div>
+                <p class="hero-sub-title">We don't rent. We provide an experience</p>
+
+                <div class="all-listings-button">
+                    <a href="/ads" role="button">View Listings</a>
                 </div>
             </div>
-        </c:forEach>
-    </div>
-</div>
-<%--</div>--%>
+            <div class="hero-right">
+                <img src="imgs/padlister_hero.png">
+            </div>
+
+        </div>
+
+
+
+
+        <div class="ad-container">
+            <div class="title">Recent Ads</div>
+            <div class="card-container">
+                <c:forEach var="Ad" items="${newestAds}">
+                    <div class="card">
+                        <div>
+                            <h4>${Ad.title}</h4
+                            <p>${Ad.description}</p>
+                        </div>
+                        <br>
+
+                        <div>
+<%--                            <p>${Ad.timeCreated}</p>--%>
+                            <p>Added ${Ad.getTimeDifferenceString()}</p>
+                        </div>
+
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+
 </body>
+<jsp:include page="WEB-INF/partials/footer.jsp"/>
+
 </html>

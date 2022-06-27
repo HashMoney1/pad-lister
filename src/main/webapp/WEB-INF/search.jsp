@@ -3,7 +3,7 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Padlister: All ads" />
+        <jsp:param name="title" value="Padlister: Search results" />
     </jsp:include>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
