@@ -212,6 +212,7 @@ public class MySQLAdsDAO implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads from the database", e);
         }
+
         return ads;
     }
 
