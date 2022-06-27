@@ -39,6 +39,13 @@
                     </c:if>
                 </div>
                 <div class="input-format">
+                    <label for="location">Location</label>
+                    <input id="location" name="location" class="form-control" type="text" value="${location}">
+                    <c:if test="${adErrors.containsKey('location')}">
+                        <span class="errors">${adErrors.get('location')}</span>
+                    </c:if>
+                </div>
+                <div class="input-format">
                     <input type="submit" class="submit-btn">
                 </div>
             </form>

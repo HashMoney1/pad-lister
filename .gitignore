@@ -2,4 +2,8 @@
 target/
 .idea/
 migration.sql
+<<<<<<< HEAD
 Config.java/
+=======
+Config.java
+>>>>>>> f5d346af98df4b3b4326ab0903759f30b1321b22
