@@ -9,7 +9,7 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
-<div class="profile-container shadow>
+<div class="profile-container shadow">
 
     <div>
         <h1 class="profile-welcome">Enter a pad</h1>
@@ -25,8 +25,8 @@
         <div>
             <form action="/ads/create" method="post">
                 <div class="input-format">
-                    <label for="title">Title</label>
-                    <input id="title" name="title" class="form-control" type="text" value="${title}">
+                    <label for="title">Location</label>
+                    <input id="title" name="title" class="form-control" type="text" value="${title}" placeholder="please enter location">
                     <c:if test="${adErrors.containsKey('title')}">
                         <span class="errors">${adErrors.get('title')}</span>
                     </c:if>
