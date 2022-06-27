@@ -27,6 +27,7 @@ public class CreateAdServlet extends HttpServlet {
             return;
         }
 
+        String location = request.getParameter("location");
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         User user = (User) request.getSession().getAttribute("user");
@@ -38,14 +39,21 @@ public class CreateAdServlet extends HttpServlet {
             request.setAttribute("title", title);
         }
 
+        if (location.isEmpty()) {
+            adErrors.put("location","location cannot be left blank");
+        } else {
+            request.setAttribute("location", location);
+        }
+
         if (description.isEmpty()) {
             adErrors.put("description", "Description cannot be left blank");
         } else {
             request.setAttribute("description", description);
         }
+
         request.setAttribute("adErrors", adErrors);
 
-        if (title.isEmpty() || description.isEmpty()) {
+        if (title.isEmpty() || description.isEmpty() || location.isEmpty()) {
             request.getRequestDispatcher("/WEB-INF/create-ad.jsp").forward(request, response);
             return;
         } else {
@@ -53,7 +61,8 @@ public class CreateAdServlet extends HttpServlet {
             Ad ad = new Ad (
                     user.getId(),
                     title,
-                    description
+                    description,
+                    location
             );
 
             Long newid = DaoFactory.getAdsDao().insertAd(ad);

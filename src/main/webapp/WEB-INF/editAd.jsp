@@ -29,6 +29,13 @@
                     <span class="errors">${adErrors.get('description')}</span>
                 </c:if>
             </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input id="location" name="location" class="form-control" type="text" value="${ad.location}">
+                <c:if test="${adErrors.containsKey('location')}">
+                    <span class="errors">${adErrors.get('location')}</span>
+                </c:if>
+            </div>
             <input type="hidden" name="id" value="${ad.id}">
             <input type="submit" class="btn btn-primary btn-block">
         </form>

@@ -31,6 +31,8 @@ public class EditAdServlet extends HttpServlet {
 
         String title = request.getParameter("title");
         String description = request.getParameter("description");
+        String location = request.getParameter("location");
+
         HashMap<String, String> errors = new HashMap<>();
 
         if (title == null || title.trim().isEmpty()) {
@@ -40,7 +42,9 @@ public class EditAdServlet extends HttpServlet {
         if (description == null || description.trim().isEmpty()) {
             errors.put("description", "description cannot be empty");
         }
-
+        if (location == null || location.trim().isEmpty()) {
+            errors.put("location", "location cannot be empty");
+        }
         if(errors.size() > 0) {
             request.setAttribute("adErrors", errors);
             request.setAttribute("ad", ad);
@@ -49,6 +53,7 @@ public class EditAdServlet extends HttpServlet {
         }
 
         ad.setTitle(title);
+        ad.setLocation(location);
         ad.setDescription(description);
         DaoFactory.getAdsDao().updateAd(ad);
         response.sendRedirect("/profile");

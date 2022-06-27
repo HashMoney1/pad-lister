@@ -18,6 +18,8 @@
                 <div>
                     <h4>${Ad.title}</h4
                     <p>${Ad.description}</p>
+                    <p>${Ad.location}</p>
+
                 </div>
                 <br>
                 <div>
@@ -41,7 +43,9 @@
                     <div class="cards mr-3 mb-3">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
-<%--                        <p>Created On: ${ad.dateMade}</p>--%>
+                        <p>${Ad.location}</p>
+
+                    <%--                        <p>Created On: ${ad.dateMade}</p>--%>
 <%--                        <p>Categories: ${ad.catString}</p>--%>
                     </div>
                 </a>
