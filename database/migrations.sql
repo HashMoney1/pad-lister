@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS jtt_adlister_db;
-USE jtt_adlister_db;
+CREATE DATABASE IF NOT EXISTS padlister_db;
+USE padlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
