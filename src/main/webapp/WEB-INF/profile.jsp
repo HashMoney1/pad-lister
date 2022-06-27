@@ -26,6 +26,8 @@
                     <div>
                         <h4>${Ad.title}</h4
                         <p>${Ad.description}</p>
+                        <p>${Ad.location}</p>
+
                     </div>
                     <br>
                     <div>

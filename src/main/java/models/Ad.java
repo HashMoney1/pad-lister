@@ -10,22 +10,27 @@ public class Ad {
     private String title;
     private String description;
     private Timestamp timeCreated;
+    private String location;
 
     public Ad() { }
 
-    public Ad(long id, long userId, String title, String description, Timestamp timeCreated){
+    public Ad(long id, long userId, String title, String description, Timestamp timeCreated, String location){
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.timeCreated = timeCreated;
+        this.location = location;
+
     }
 
-    public Ad(long userId, String title, String description) {
+    public Ad(long userId, String title, String description, String location) {
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.timeCreated = new Timestamp(System.currentTimeMillis());
+        this.location = location;
+
     }
 
     public long getUserId() {
@@ -82,5 +87,12 @@ public class Ad {
     public String getTimeDifferenceString() {
         TimestampSpan difference = new TimestampSpan(timeCreated);
         return difference.getDifferenceString();
+    }
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

@@ -7,7 +7,7 @@
 <nav class="nav-bar">
     <div class="logo-holder">
         <a href="/home">
-            <img src="/imgs/logo_padlister.png" class="logo">
+            <img src="imgs/logo_padlister.png" class="logo">
         </a>
     </div>
 
@@ -27,7 +27,7 @@
 
     <form action="/searchAds" method="POST">
         <input type='submit'><a href="/searchAds"></a>
-        <input type="search" placeholder="Search for ad" name="keyword"></form>
+        <input type="search" placeholder="Search by city" name="keyword"></form>
 </nav>
 </body>
 

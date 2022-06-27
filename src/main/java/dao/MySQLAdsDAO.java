@@ -37,7 +37,8 @@ public class MySQLAdsDAO implements Ads {
                         rs.getLong("user_id"),
                         rs.getString("title"),
                         rs.getString("description"),
-                        rs.getTimestamp("created_at")
+                        rs.getTimestamp("created_at"),
+                        rs.getString("location")
                 ));
             }
         } catch (SQLException e) {
@@ -62,7 +63,8 @@ public class MySQLAdsDAO implements Ads {
                         rs.getLong("user_id"),
                         rs.getString("title"),
                         rs.getString("description"),
-                        rs.getTimestamp("created_at")
+                        rs.getTimestamp("created_at"),
+                        rs.getString("location")
                 ));
             }
         } catch (SQLException e) {
@@ -78,13 +80,14 @@ public class MySQLAdsDAO implements Ads {
 
         try {
             PreparedStatement stmt = connection.prepareStatement(
-                    "INSERT INTO ads (user_id, title, description, created_at) VALUES (?,?,?,?)",
+                    "INSERT INTO ads (user_id, title, description, created_at, location) VALUES (?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS
             );
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
             stmt.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
+            stmt.setString(5, ad.getLocation());
 
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
@@ -113,7 +116,8 @@ public class MySQLAdsDAO implements Ads {
                         rs.getLong("user_id"),
                         rs.getString("title"),
                         rs.getString("description"),
-                        rs.getTimestamp("created_at")
+                        rs.getTimestamp("created_at"),
+                        rs.getString("location")
                 );
             }
         } catch (SQLException e) {
@@ -137,11 +141,12 @@ public class MySQLAdsDAO implements Ads {
 
             while (rs.next()) {
                 newestAds.add(new Ad(
-                                rs.getLong("id"),
-                                rs.getLong("user_id"),
-                                rs.getString("title"),
-                                rs.getString("description"),
-                                rs.getTimestamp("created_at")
+                        rs.getLong("id"),
+                        rs.getLong("user_id"),
+                        rs.getString("title"),
+                        rs.getString("description"),
+                        rs.getTimestamp("created_at"),
+                        rs.getString("location")
                         )
                 );
             }
@@ -172,12 +177,12 @@ public class MySQLAdsDAO implements Ads {
     @Override
     public void updateAd(Ad ad) {
         try{
-            PreparedStatement stmt = connection.prepareStatement("UPDATE ads SET title=?, description=? WHERE id=?");
-
+            PreparedStatement stmt = connection.prepareStatement("UPDATE ads SET title=?, description=?, location=? WHERE id=?");
 
             stmt.setString(1, ad.getTitle());
             stmt.setString(2, ad.getDescription());
             stmt.setLong(3, ad.getId());
+            stmt.setString(4, ad.getLocation());
 
             stmt.executeUpdate();
 
@@ -200,7 +205,8 @@ public class MySQLAdsDAO implements Ads {
                         rs.getLong("user_id"),
                         rs.getString("title"),
                         rs.getString("description"),
-                        rs.getTimestamp("created_at")
+                        rs.getTimestamp("created_at"),
+                        rs.getString("location")
                 ));
             }
         } catch (SQLException e) {
@@ -214,7 +220,7 @@ public class MySQLAdsDAO implements Ads {
         String query = "SELECT *, users.username FROM ads\n" +
                 "JOIN users\n" +
                 "ON users.id = ads.user_id\n" +
-                "WHERE ads.title LIKE ?";
+                "WHERE ads.location LIKE ?";
         PreparedStatement ps = connection.prepareStatement(query);
         ps.setString(1, "%" + keyword + "%");
         ResultSet rs = ps.executeQuery();
@@ -225,8 +231,9 @@ public class MySQLAdsDAO implements Ads {
                     rs.getLong("user_id"),
                     rs.getString("title"),
                     rs.getString("description"),
-                    rs.getTimestamp("created_at")
-            );
+                    rs.getTimestamp("created_at"),
+                    rs.getString("location")
+                    );
             keywordAds.add(newAd);
         }
         return keywordAds;
