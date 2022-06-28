@@ -9,7 +9,6 @@
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp" />
-
 <div class="ad-container shadow">
     <h1 class="title">Search results</h1>
     <div class="card-container">
