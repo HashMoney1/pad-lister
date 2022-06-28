@@ -24,7 +24,7 @@
                 <p class="hero-sub-title">We don't rent. We provide an experience</p>
 
                 <div class="all-listings-button">
-                    <a href="/ads" role="button">View Listings</a>
+                    <a href="/ads" role="button">View Listings</a> <%--button urlPattern:/ads from AdsServlet--%>
                 </div>
             </div>
             <div class="hero-right">

@@ -46,9 +46,39 @@
                     </c:if>
                 </div>
                 <div class="input-format">
+                    <input type="file" name="file" />
+<%--                    <input type="submit" value="Upload" />--%>
                     <input type="submit" class="submit-btn">
                 </div>
             </form>
+            <%-- Image Upload on new Pads --%>
+            <h3>Images:</h3>
+            Select a image to upload: <br />
+<%--            <form action = "/fileuploadservlet" method = "post"--%>
+<%--                  enctype = "multipart/form-data">--%>
+<%--                <input type = "file" name = "file" size = "50" />--%>
+<%--                <br />--%>
+<%--                <input type = "submit" value = "Upload File" />--%>
+<%--            </form>--%>
+<%--            <form method="post" action="/ads/create" enctype="multipart/form-data">--%>
+<%--                <input type="file" name="file" />--%>
+<%--                <input type="submit" value="Upload" />--%>
+<%--            </form>--%>
+<%--            <input id="ajaxfile" type="file"/> <br/>--%>
+<%--            <button onclick="uploadFile()"> Upload </button>--%>
+
+            <!-- Ajax to Java File Upload Logic -->
+<%--            <script>--%>
+<%--                async function uploadFile() {--%>
+<%--                    let formData = new FormData();--%>
+<%--                    formData.append("file", ajaxfile.files[0]);--%>
+<%--                    await fetch('fileuploadservlet', {--%>
+<%--                        method: "POST",--%>
+<%--                        body: formData--%>
+<%--                    });--%>
+<%--                    alert('The file upload with Ajax and Java was a success!');--%>
+<%--                }--%>
+<%--            </script>--%>
         </div>
     </div>
 

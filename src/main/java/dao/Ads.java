@@ -15,4 +15,5 @@ public interface Ads {
     void deleteAd(Ad ad);
     void updateAd(Ad ad);
     List<Ad> getDeletedAds();
+//    getSubmittedFileName()
 }

@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -69,6 +70,14 @@ public class CreateAdServlet extends HttpServlet {
             request.setAttribute("newid", newid);
             response.sendRedirect("/profile");
         }
-
+        Part filePart = request.getPart("file");
+        String fileName = filePart.getSubmittedFileName();
+        for (Part part : request.getParts()) {
+            part.write("C:\\upload\\" + fileName);
+        }
+//        response.getWriter().print("The file uploaded sucessfully.");
+        getServletContext().getRequestDispatcher("/WEB-INF/create-ad.jsp").forward(request, response);
     }
-}
+    }
+
+
