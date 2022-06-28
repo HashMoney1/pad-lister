@@ -10,7 +10,7 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-<div class="register-login-container">
+<div class="register-login-container shadow">
     <h1>Register Below</h1>
 
     <form action="/register" method="POST" class="form-container">

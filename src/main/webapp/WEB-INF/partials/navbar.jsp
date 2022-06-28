@@ -4,13 +4,14 @@
 
 </head>
 <body>
-<nav class="nav-bar">
+<nav class="nav-bar shadow">
     <div class="logo-holder">
         <a href="/home">
-            <img src="imgs/logo_padlister.png" class="logo">
+            <img src="/imgs/logo_padlister.png" class="logo">
         </a>
     </div>
 
+<div class="links-search-holder">
     <div class="links-holder">
         <a href="/ads">All Ads</a>
 
@@ -25,9 +26,15 @@
         </c:if>
     </div>
 
+<div class="searchform-holder">
     <form action="/searchAds" method="POST">
-        <input type='submit'><a href="/searchAds"></a>
-        <input type="search" placeholder="Search by city" name="keyword"></form>
+        <input type="search" name="keyword" class="input-search">
+        <input type='submit' class="search-btn" value="search">
+<%--        <a href="/searchAds"></a>--%>
+    </form>
+</div>
+</div>
+
 </nav>
 </body>
 
