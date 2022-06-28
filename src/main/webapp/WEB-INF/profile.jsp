@@ -19,7 +19,7 @@
     </div>
 
     <div class="all-ads-container">
-        <div class="title">All ads</div>
+        <div class="title">All pads</div>
         <div class="card-container">
             <c:forEach var="Ad" items="${ads}">
                 <div class="card">
