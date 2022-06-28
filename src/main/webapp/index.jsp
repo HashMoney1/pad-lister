@@ -37,7 +37,7 @@
 
 
         <div class="ad-container">
-            <div class="title">Recent Ads</div>
+            <div class="title">Recent Pads</div>
             <div class="card-container">
                 <c:forEach var="Ad" items="${newestAds}">
                     <div class="card">

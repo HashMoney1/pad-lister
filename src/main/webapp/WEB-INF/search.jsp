@@ -22,6 +22,8 @@
             <div class="card">
                 <h2>${ad.title}</h2>
                 <p>${ad.description}</p>
+                <p>${Ad.location}</p>
+
             </div>
         </c:forEach>
     </c:if>

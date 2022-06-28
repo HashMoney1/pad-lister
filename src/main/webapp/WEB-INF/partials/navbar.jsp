@@ -28,7 +28,7 @@
 
 <div class="searchform-holder">
     <form action="/searchAds" method="POST">
-        <input type="search" name="keyword" class="input-search">
+        <input type="search" name="keyword" class="input-search" placeholder="Search by City">
         <input type='submit' class="search-btn" value="search">
 <%--        <a href="/searchAds"></a>--%>
     </form>
