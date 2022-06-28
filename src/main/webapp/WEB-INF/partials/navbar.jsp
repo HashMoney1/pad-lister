@@ -13,7 +13,7 @@
 
 <div class="links-search-holder">
     <div class="links-holder">
-        <a href="/ads">All Ads</a>
+        <a href="/ads">All pads</a>
 
         <c:if test="${sessionScope.user != null}">
             <a href="/profile">Profile</a>
