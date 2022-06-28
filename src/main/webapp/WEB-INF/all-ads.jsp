@@ -3,7 +3,7 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Padlister: All ads" />
+        <jsp:param name="title" value="Padlister: All pads" />
     </jsp:include>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
@@ -11,7 +11,7 @@
 <jsp:include page="partials/navbar.jsp" />
 
 <div class="ad-container">
-    <div class="title">All ads</div>
+    <div class="title">All pads</div>
     <div class="card-container">
         <c:forEach var="Ad" items="${allAds}">
             <div class="card">

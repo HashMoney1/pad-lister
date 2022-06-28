@@ -3,7 +3,7 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Edit Your Ad" />
+        <jsp:param name="title" value="Edit Your pad" />
     </jsp:include>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
